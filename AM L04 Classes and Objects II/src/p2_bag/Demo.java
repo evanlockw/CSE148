@@ -6,7 +6,7 @@ import p1_composition.Student;
 public class Demo {
 
 	public static void main(String[] args) {
-		StudentBag theBag = new StudentBag(1000);
+		StudentBag theBag = new StudentBag(4);
 		Name name1 = new Name("John", "Doe");
 		Student s1 = new Student(name1, 2.5);
 		
@@ -34,8 +34,7 @@ public class Demo {
 		
 		System.out.println("\nNow display the bag: ");
 		theBag.display();
-		
-		
+	
 	}
 
 }
