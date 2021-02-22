@@ -1,4 +1,4 @@
-package p2;
+package p1_intro;
 
 public class Student {
 	private Name name;
@@ -7,17 +7,9 @@ public class Student {
 	
 	private static int idCounter = 0;
 	
-	public Student(Name name, double gpa) {
-		super();
-		this.name = name;
-		this.gpa = gpa;
-		id = String.valueOf(idCounter++);
-	}
-	
-	// deep copy constructor
-	public Student(Student student) {
-		this.name = new Name(student.getName().getFirstName(), student.getName().getLastName());
-		this.gpa = student.gpa;
+	public Student(String firstName, String lastName) {
+		name = new Name(firstName, lastName);
+		gpa = 0.0;
 		id = String.valueOf(idCounter++);
 	}
 
@@ -36,20 +28,14 @@ public class Student {
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
 	}
-	
-	
 
 	public String getId() {
 		return id;
 	}
 
-//	public void setId(int id) {
-//		this.id = id;
-//	}
-
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", gpa=" + gpa + ", ID=" + id + "]";
+		return "Student [name=" + name + ", id=" + id + ", gpa=" + gpa + "]";
 	}
 
 	
