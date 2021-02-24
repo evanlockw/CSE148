@@ -7,6 +7,12 @@ public class Student extends Person {
 		super(firstName, lastName); // superclass's constructor. it has to be the first statement
 		this.gpa = gpa;
 	}
+	
+	// deepcopy constructor
+	public Student(Student s) {
+		super(s.getName().getFirstName(), s.getName().getLastName());
+		this.gpa = s.getGpa();
+	}
 
 	public double getGpa() {
 		return gpa;

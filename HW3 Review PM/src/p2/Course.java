@@ -21,7 +21,5 @@ public class Course {
 		return "Course [courseNumber=" + courseNumber + ", courseTitle=" + courseTitle + ", description=" + description
 				+ ", credits=" + credits + ", textbook=" + textbook + "]";
 	}
-	
-	
 
 }

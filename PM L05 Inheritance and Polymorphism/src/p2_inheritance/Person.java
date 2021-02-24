@@ -7,6 +7,7 @@ public class Person {
 	private static int idCounter = 0;
 
 	public Person(String firstName, String lastName) {
+//		super();
 		name = new Name(firstName, lastName);
 		id = String.valueOf(idCounter++);
 	}
@@ -21,6 +22,10 @@ public class Person {
 
 	public String getId() {
 		return id;
+	}
+
+	void setId(String id) { // default access, aka package access
+		this.id = id;
 	}
 
 	@Override

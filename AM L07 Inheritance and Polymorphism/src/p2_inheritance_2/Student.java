@@ -2,10 +2,17 @@ package p2_inheritance_2;
 
 public class Student extends Person {
 	private double gpa;
+	
+	private final double PARKING_FEES = 50;
 
 	public Student(String firstName, String lastName) {
 		super(firstName, lastName);
 		this.gpa = 0.0;
+	}
+	
+	@Override
+	public Name getName() {
+		return new Name("John", "Doe");
 	}
 
 	public double getGpa() {
@@ -19,6 +26,16 @@ public class Student extends Person {
 	@Override
 	public String toString() {
 		return "Student [" + super.toString() + ", gpa=" + gpa + "]";
+	}
+
+	@Override
+	public double FineOwed() {
+		return PARKING_FEES;
+	}
+
+	@Override
+	public void display() {
+		System.out.println(toString());
 	}
 	
 	

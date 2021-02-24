@@ -7,6 +7,11 @@ public class Instructor extends Person {
 		super(firstName, lastName);
 		this.rank = rank;
 	}
+	// deepcopy constructor
+	public Instructor(Instructor i) {
+		super(i.getName().getFirstName(), i.getName().getLastName());
+		this.rank = i.getRank();
+	}
 
 	public String getRank() {
 		return rank;
