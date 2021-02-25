@@ -18,7 +18,7 @@ public class Demo1 {
 //		Student s2 = new Student("StudentBFirst", "StudentBLast");
 ////		System.out.println(s2);
 //		
-//		Instructor i1 = new Instructor("InstructorAFirst", "InstructorALast", "Professor");
+//		Instructor i1 = new Instructor("InstructorAFirst", "InstructorALast", "Prof");
 ////		System.out.println(i1);
 //		
 //		Instructor i2 = new Instructor("InstructorBFirst", "InstructorBLast", "Associate Professor");
@@ -28,13 +28,15 @@ public class Demo1 {
 //		
 //		System.out.println(i1 instanceof Person);
 		
-		Student s1 = new Student("StudentFirstName1", "StudentLastName1");
-		Name name = s1.getName();
-		System.out.println(s1.FineOwed());
-		s1.display();
-		Instructor i1 = new Instructor("InstructorAFirst", "InstructorALast", "Professor");
-		System.out.println(i1.FineOwed());
-		i1.display();
+//		Student s1 = new Student("StudentFirstName1", "StudentLastName1");
+//		Name name = s1.getName();
+//		System.out.println(s1.FineOwed());
+//		s1.display();
+//		Instructor i1 = new Instructor("InstructorAFirst", "InstructorALast", "Professor");
+//		System.out.println(i1.FineOwed());
+//		i1.display();
+		
+		Instructor instructor1 = new Instructor("A", "B", InstructorInterface.PROFESSOR);
 	}
 
 }

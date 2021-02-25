@@ -4,13 +4,12 @@ package p1_introduction;
 public interface Duckable {
 	
 	// all variables are public, static, final
-	public static final double WEIGHT = 10.0; 
-	
+	double WEIGHT = 10.0; 
+	int AGE = 1;
 	
 	// all methods are public and abstract
 	void swim();
 	void quack();
 	void fly();
-	
 
 }

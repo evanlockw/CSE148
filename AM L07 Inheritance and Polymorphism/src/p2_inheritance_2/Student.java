@@ -1,6 +1,6 @@
 package p2_inheritance_2;
 
-public class Student extends Person {
+public class Student extends Person implements StudentInterface {
 	private double gpa;
 	
 	private final double PARKING_FEES = 50;
@@ -36,6 +36,11 @@ public class Student extends Person {
 	@Override
 	public void display() {
 		System.out.println(toString());
+	}
+
+	@Override
+	public double calculateGPA() {
+		return 0;
 	}
 	
 	
