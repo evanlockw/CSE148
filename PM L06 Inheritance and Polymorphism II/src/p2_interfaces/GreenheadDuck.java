@@ -1,22 +1,14 @@
 package p2_interfaces;
 
-public class GreenheadDuck implements Duckable {
+public class GreenheadDuck implements Flyable, Displayable {
 
 	@Override
 	public void fly() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void swim() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void quack() {
-		// TODO Auto-generated method stub
+	public void display() {
 		
 	}
 

@@ -9,4 +9,12 @@ public interface Duckable {
 	void swim();
 	void quack();
 	
+	public default void walk() {
+		System.out.println("Walk...");
+	}
+	
+	static void eat() {
+		System.out.println("Eat...");
+	}
+	
 }
