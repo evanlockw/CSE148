@@ -37,6 +37,7 @@ public class Demo1 {
 //		i1.display();
 		
 		Instructor instructor1 = new Instructor("A", "B", InstructorInterface.PROFESSOR);
+		System.out.println(instructor1.getRank());
 	}
 
 }

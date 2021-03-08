@@ -1,6 +1,8 @@
 package p4_how_to_use_interfaces_1;
 
-public class WoodenDuck implements Displayable {
+
+// use an interface by creating a concrete class.
+public class WoodenDuck implements Displayable { 
 	private String name;
 	
 	public WoodenDuck(String name) {
@@ -20,7 +22,7 @@ public class WoodenDuck implements Displayable {
 
 	@Override
 	public void display() {
-		System.out.println("WoodenDuck displays..." + Math.PI);
+		System.out.println("WoodenDuck displays...");
 	}
 
 

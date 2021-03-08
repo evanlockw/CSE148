@@ -7,12 +7,12 @@ public class Demo {
 
 			@Override
 			public void display() {
-				System.out.println("WoodenDuck1 displays one way...");
+				System.out.println("WoodenDuck1 displays wd1 way...");
 			}
 
 			@Override
 			public void fly() {
-				System.out.println("WoodenDuck1 flys one way...");
+				System.out.println("WoodenDuck1 flys wd1 way...");
 			}
 			
 		};
@@ -21,12 +21,12 @@ public class Demo {
 
 			@Override
 			public void display() {
-				System.out.println("WoodenDuck2 displayw the other way...");
+				System.out.println("WoodenDuck2 displays wd2 way...");
 			}
 
 			@Override
 			public void fly() {
-				System.out.println("WoodenDuckw flys the other way...");
+				System.out.println("WoodenDuckw flys wd2 way...");
 
 			}
 			
