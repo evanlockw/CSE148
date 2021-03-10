@@ -1,5 +1,7 @@
 package p1;
 
+import java.util.function.Predicate;
+
 public class PersonBag {
 	private Person[] personArr;
 	private int nElems;
@@ -46,5 +48,14 @@ public class PersonBag {
 			System.out.println(personArr[i]);
 		}
 		System.out.println();
+	}
+	
+	public Person find(Predicate<Person> predicate) {
+		for(int i = 0; i < nElems; i++) {
+			if(predicate.test(personArr[i])) {
+				return personArr[i];
+			}
+		} 
+		return null;
 	}
 }

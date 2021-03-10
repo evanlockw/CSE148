@@ -16,6 +16,12 @@ public class Demo {
 			System.out.println("flying one way...");
 		};
 		
+//		int i = x + y;
+//		y = x^2 + 2x + 1; // math function
+//		int y = 5;
+//		setAge(y);
+//		setAge(x^2 + 2x + 1) // With Java functional programming, you may pass a function as data to a method
+		
 		d1.fly();
 		
 		Moveable d2 = () -> {
