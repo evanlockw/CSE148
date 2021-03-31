@@ -42,6 +42,10 @@ public class StudentBag {
 		studentsRemoved.trimToSize();
 		return studentsRemoved;
 	}
+	
+	public int myIndexOf(Student s) {
+		return list.indexOf(s);
+	}
 
 //	public ArrayList<Student> searchByName(String name) {
 //		ArrayList<Student> studentsFound = new ArrayList<>(list.size());

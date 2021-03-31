@@ -19,14 +19,18 @@ public class Demo2 {
 		theBag.add(s4);
 		theBag.add(s5);
 		theBag.add(s6);
+		theBag.add(s1);
 		
 		ArrayList<Student> removed = theBag.remove((s) -> {
 //			return s.getName().equals("A");
 			return s.getGpa() == 0.0;
 		});
-		System.out.println(removed);
+		System.out.println("Students removed: " + removed);
 		System.out.println("-------------------------");
 		theBag.display();
+		System.out.println("-------------------------");
+		System.out.println(theBag.myIndexOf(s1));
+	
 		
 	}
 
