@@ -6,9 +6,9 @@ public class Demo {
 
 	public static void main(String[] args) {
 		UserBag userBag = new UserBag(1000);
-		BackupRestoreTools.importUser(userBag);
+		BackupRestoreTools.importUser(userBag, "data/users.txt");
 		userBag.display();
-		BackupRestoreTools.exportUser(userBag, "data/emails.txt");
+		BackupRestoreTools.exportUser(userBag, "data/usernames.txt");
 		System.out.println("Done exporting!");
 	}
 
