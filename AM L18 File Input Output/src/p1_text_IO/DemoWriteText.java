@@ -19,6 +19,8 @@ public class DemoWriteText {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 }

@@ -21,10 +21,18 @@ public class UserBag {
 	
 	public boolean login(String username, String password) {
 		for(int i = 0; i < nElems; i++) {
-			if(arr[i].getUsername().equals(username) && arr[i].getPassword().equals(password)) {
+			if(arr[i].getUsername().equalsIgnoreCase(username) && arr[i].getPassword().equals(password)) {
 				return true;
 			}
 		}
 		return false;
+	}
+	
+	public int size() {
+		return nElems;
+	}
+	
+	public User[] getArray() {
+		return arr;
 	}
 }

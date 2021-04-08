@@ -13,8 +13,11 @@ public class DemoReadText {
 		
 		ImportExportTools.importUsers(theBag, "data/users.txt");
 
-		boolean isValid = theBag.login("admin", "Admin123");
-		System.out.println("Valid? " + isValid);
+//		boolean isValid = theBag.login("AdmiN", "Admin1234");
+//		System.out.println("Valid? " + isValid);
+		
+		ImportExportTools.exportUsers(theBag, "data/UsernamesPasswords.txt");
+		System.out.println("Done exporting!");
 	}
 
 }
