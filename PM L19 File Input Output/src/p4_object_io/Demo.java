@@ -1,12 +1,5 @@
 package p4_object_io;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-
 import utils.BackupRestoreTools;
 
 public class Demo {
@@ -17,8 +10,8 @@ public class Demo {
 		
 		theBag.insert(user1);
 		
-		BackupRestoreTools.backup(theBag);
 		theBag.display();
+		BackupRestoreTools.backup(theBag);
 		
 	}
 		
