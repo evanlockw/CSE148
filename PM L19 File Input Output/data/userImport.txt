@@ -1,0 +1,15 @@
+Allen, Smith, 0, asmith@gmail.com, asmith, password1 images/asmith.jpeg
+3
+100, 04/10/2020, 10.5
+90, 04/12/2020, 1.5
+101, 04/14/2021, 20.5
+
+Bill, Smith, 0, bsmith@gmail.com, bsmith, password2 images/bsmith.jpeg
+1
+4, 01/01/2021, 100.5
+
+Cathy, Smith, 0, csmith@gmail.com, csmith, password3 images/csmith.jpeg
+2
+4, 11/01/2020, 10.5
+44, 12/01/2020, 1.5
+
