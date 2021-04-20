@@ -1,6 +1,6 @@
 package model;
 
-public class TrailBag {
+public class TrailBag implements Bagable {
 	private Trail[] arr;
 	private int nElems;
 	
@@ -8,8 +8,11 @@ public class TrailBag {
 		arr = new Trail[maxSize];
 	}
 	
-	public void insert(Trail trail) {
-		arr[nElems++] = trail;
+	@Override
+	public void display() {
+		
 	}
+	
+	
 
 }

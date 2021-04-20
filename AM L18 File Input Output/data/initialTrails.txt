@@ -1,0 +1,4 @@
+GreenBelt 1; 0; 1, Main Street, Selden, NY, 11784; LOOP; 10.5; EASY, 1000
+GreenBelt 2; 1; 2, Main Street, Stony Brook, NY, 11784; LOOP; 10.5; EASY, 1000
+GreenBelt 3; 2; 3, Main Street, Miller Place, NY, 11784; OUT_AND_BACK; 10.5; DIFFICULT, 1000
+GreenBelt 4; 3; 4, Main Street, St James, NY, 11784; LOOP; 10.5; EASY, 1000

@@ -1,0 +1,78 @@
+package view;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import model.UserBag;
+
+public class SignInPane {
+	
+	private Pane root;
+	
+	public SignInPane(UserBag userBag) {
+		VBox box1 = new VBox(30);
+		box1.setAlignment(Pos.CENTER);
+		
+		TextField usernameField = new TextField();
+		usernameField.setPromptText("USERNAME");
+		usernameField.setMaxSize(200, 20);
+		
+		PasswordField passwordField = new PasswordField();
+		passwordField.setPromptText("PASSWORD");
+		passwordField.setMaxSize(200, 20);
+		
+		box1.getChildren().addAll(usernameField, passwordField);
+		
+		
+		HBox btnBox = new HBox(30);
+		btnBox.setAlignment(Pos.CENTER);
+		
+		Button signInBtn = new Button("SIGN IN");
+		
+		
+		
+		Button signUpBtn = new Button("SIGN UP");
+		
+		btnBox.getChildren().addAll(signInBtn, signUpBtn);
+		
+		HBox lblBox = new HBox(30);
+		lblBox.setAlignment(Pos.CENTER);
+		Label msgLbl = new Label();
+		lblBox.getChildren().add(msgLbl);
+		
+		root = new VBox(30);
+		root.getChildren().addAll(box1, btnBox, lblBox);
+		Insets insets = new Insets(100, 0, 0, 0);
+		root.setPadding(insets);
+		
+		signInBtn.setOnAction(e -> {
+			String username = usernameField.getText();
+			String password = passwordField.getText();
+			if(userBag.isSignedIn(username, password)) {
+				msgLbl.setText("Sign in Success!");
+				System.out.println("Change to user view");
+			} else {
+				msgLbl.setText("Sign in failed.");
+				usernameField.clear();
+				passwordField.clear();
+				System.out.println("Ask the user to enter again!");
+			}
+		});
+		
+		signUpBtn.setOnAction(e -> {
+			System.out.println("Show the sign up pane!");
+		});
+		
+		this.root = root;
+	}
+
+	public Pane getRoot() {
+		return root;
+	}
+}
