@@ -9,13 +9,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import model.UserBag;
 
 public class SignInPane {
 	
 	private Pane root;
 	
-	public SignInPane(UserBag userBag) {
+	public SignInPane(UserBag userBag, Stage primaryStage) {
 		VBox box1 = new VBox(30);
 		box1.setAlignment(Pos.CENTER);
 		
@@ -34,9 +35,6 @@ public class SignInPane {
 		btnBox.setAlignment(Pos.CENTER);
 		
 		Button signInBtn = new Button("SIGN IN");
-		
-		
-		
 		Button signUpBtn = new Button("SIGN UP");
 		
 		btnBox.getChildren().addAll(signInBtn, signUpBtn);
@@ -56,20 +54,22 @@ public class SignInPane {
 			String password = passwordField.getText();
 			if(userBag.isSignedIn(username, password)) {
 				msgLbl.setText("Sign in Success!");
-				System.out.println("Change to user view");
+				// should then go to another pane (e.g., explore trails pane)
 			} else {
-				msgLbl.setText("Sign in failed.");
+//				msgLbl.setText("Sign in failure.");
 				usernameField.clear();
 				passwordField.clear();
-				System.out.println("Ask the user to enter again!");
+				msgLbl.setText("Incorrect username or password. Try again!");
 			}
 		});
 		
 		signUpBtn.setOnAction(e -> {
-			System.out.println("Show the sign up pane!");
+//			System.out.println("Show the sign up pane!");
+			this.root = new SignUpPane(userBag, primaryStage).getRoot();
+			primaryStage.getScene().setRoot(root);
 		});
 		
-		this.root = root;
+		
 	}
 
 	public Pane getRoot() {

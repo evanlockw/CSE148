@@ -7,6 +7,26 @@ public class User {
 	private boolean isAdmin;
 	private HikeHistory hikes;
 
+	User(String firstName, String lastName, String userName, String password, boolean isAdmin,
+			HikeHistory hikes) {
+		super();
+		this.name = new Name(firstName, lastName);
+		this.userName = userName;
+		this.password = password;
+		this.isAdmin = isAdmin;
+		this.hikes = hikes;
+	}
+	
+	public User(String firstName, String lastName, String userName, String password,
+			HikeHistory hikes) {
+		super();
+		this.name = new Name(firstName, lastName);
+		this.userName = userName;
+		this.password = password;
+		this.isAdmin = false;
+		this.hikes = hikes;
+	}
+
 	public Name getName() {
 		return name;
 	}
@@ -35,8 +55,18 @@ public class User {
 		return isAdmin;
 	}
 
-	public void setAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
+	public void setAdmin(User user) {
+		if (this.isAdmin) {
+			user.isAdmin = true;
+		} else {
+			user.isAdmin = false;
+		}
+	}
+	
+	public void unSetAdmin(User user) {
+		if(this.isAdmin) {
+			user.isAdmin = false;
+		} 
 	}
 
 	public HikeHistory getHikes() {
@@ -47,4 +77,11 @@ public class User {
 		this.hikes = hikes;
 	}
 
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", userName=" + userName + ", password=" + password + ", isAdmin=" + isAdmin
+				+ ", hikes=" + hikes + "]";
+	}
+
+	
 }

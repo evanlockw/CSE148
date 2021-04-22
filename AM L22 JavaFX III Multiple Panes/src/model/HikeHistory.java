@@ -9,5 +9,11 @@ public class HikeHistory {
 		hikes = new ArrayList<>();
 	}
 	
+	public void addHike(Hike hike) {
+		hikes.add(hike);
+	}
 	
+	public ArrayList<Hike> getHistory() {
+		return hikes;
+	}
 }
