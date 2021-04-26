@@ -6,7 +6,9 @@ public class UserBag implements Bagable {
 
 	public UserBag(int maxSize) {
 		arr = new User[maxSize];
-		insert(new User("Admin", "Admin", "admin", "Admin123", true, new HikeHistory()));
+		User user = new User("Admin", "Admin", "admin", "Admin123", new HikeHistory());
+		setAdmin(user.getUserName());
+		insert(user);
 	}
 	
 	public void insert(User user) {
@@ -32,6 +34,24 @@ public class UserBag implements Bagable {
 	
 	public User getAdmin() {
 		return arr[0];
+	}
+	
+	public boolean setAdmin(String username) {
+		User user = searchByUsername(username);
+		if(user != null) {
+			user.setAdmin(user);
+			return true;
+		}
+		return false;
+	}
+
+	public User searchByUsername(String username) {
+		for(int i = 0; i < nElems; i++) {
+			if(arr[i].getUserName().equals(username)) {
+				return arr[i];
+			}
+		}
+		return null;
 	}
 
 }

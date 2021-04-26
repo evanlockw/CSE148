@@ -7,15 +7,15 @@ public class User {
 	private boolean isAdmin;
 	private HikeHistory hikes;
 
-	User(String firstName, String lastName, String userName, String password, boolean isAdmin,
-			HikeHistory hikes) {
-		super();
-		this.name = new Name(firstName, lastName);
-		this.userName = userName;
-		this.password = password;
-		this.isAdmin = isAdmin;
-		this.hikes = hikes;
-	}
+//	User(String firstName, String lastName, String userName, String password, boolean isAdmin,
+//			HikeHistory hikes) {
+//		super();
+//		this.name = new Name(firstName, lastName);
+//		this.userName = userName;
+//		this.password = password;
+//		this.isAdmin = isAdmin;
+//		this.hikes = hikes;
+//	}
 	
 	public User(String firstName, String lastName, String userName, String password,
 			HikeHistory hikes) {
