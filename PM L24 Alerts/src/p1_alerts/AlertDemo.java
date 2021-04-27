@@ -6,6 +6,8 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextInputDialog;
@@ -34,29 +36,35 @@ public class AlertDemo extends Application {
 		root.setPadding(new Insets(50));
 		root.getChildren().addAll(passField1, passField2, okBtn);
 		
-//		okBtn.setOnAction(e -> {
-//			if(passField1.getText().equals(passField2.getText())) {
-//				System.out.println("Good password match!");
-//			} else {
-//			Alert alert1 = new Alert(AlertType.INFORMATION);
-//			alert1.setTitle("Warning!");
-//			alert1.setHeaderText("Hey, there is a warning");
-//			alert1.setContentText("Passwords entered are not the exactly same.");
-//			alert1.showAndWait();
-//			}
-//		});
-		
 		okBtn.setOnAction(e -> {
-			TextInputDialog dialog = new TextInputDialog();
-			dialog.setTitle("Text Input Dialog");
-			dialog.setHeaderText("Look, a Text Input Dialog!");
-			dialog.setContentText("Please enter your username: ");
-			
-			Optional<String> result = dialog.showAndWait();
-			if(result.isPresent()) {
-				System.out.println("Your user name is: " + result.get());
+			if (passField1.getText().equals(passField2.getText())) {
+
+				Alert alert1 = new Alert(AlertType.INFORMATION);
+				alert1.setTitle("Information!");
+				alert1.setHeaderText("Good job!");
+				alert1.setContentText("Passwords entered are exactly the same.");
+				alert1.showAndWait();
+				
+			} else {
+				Alert alert1 = new Alert(AlertType.ERROR);
+				alert1.setTitle("ERROR!");
+				alert1.setHeaderText("Hey, there is an error");
+				alert1.setContentText("Passwords entered are not the exactly same.");
+				alert1.showAndWait();
 			}
 		});
+		
+//		okBtn.setOnAction(e -> {
+//			TextInputDialog dialog = new TextInputDialog();
+//			dialog.setTitle("Text Input Dialog");
+//			dialog.setHeaderText("Look, a Text Input Dialog!");
+//			dialog.setContentText("Please enter your username: ");
+//			
+//			Optional<String> result = dialog.showAndWait();
+//			if(result.isPresent()) {
+//				System.out.println("Your user name is: " + result.get());
+//			}
+//		});
 		
 //		
 		Scene scene = new Scene(root, 250, 200);
